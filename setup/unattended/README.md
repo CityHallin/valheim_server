@@ -1,7 +1,7 @@
 
 ## Unattended Setup Valheim Dedicated Server on Windows
 
-This script will install Valheim dedicated server on a Windows 10 or Windows 2016-2022 server system using Steam in an unattended manner. THis script is meant to be run by automation and not by end users. 
+These scripts will install Valheim dedicated server on a Windows 10 or Windows 2016-2022 server system using Steam in an unattended manner. These scripts are meant to be run by automation and not by end users. The two versions of the script give the opportunity to install vanilla Valheim Dedicated Server or Valheim Dedicated Server with some mods.
 
 ## Before running this script
 
@@ -18,13 +18,16 @@ This script will install Valheim dedicated server on a Windows 10 or Windows 201
 - Create Windows OS firewall rules for Valheim and Steam
 - Disable hibernation power config on Windows
 - Build a scheduled task for Valheim. You can start and stop Valheim from the scheduled task. The scheduled task will auto-start Valheim any time the Windows machine is rebooted. 
+- The mod version of the script will install mods:
+    - [Valheim Plus](https://www.nexusmods.com/valheim/mods/4)
+    - [Jotunn](https://www.nexusmods.com/valheim/mods/1138) (requirement for other mods)
+    - [Valheim Raft](https://www.nexusmods.com/valheim/mods/1136)
 
 ## Requirements
 
 - Currently only works with Windows 10 and Windows Server 2016-2022
-- This script is meant for new installs of Valheim Dedicated Server
+- This script is meant for new deployments of Valheim Dedicated Server
 - The automation running this script must have administrative rights on the Windows machine
-- This is a vanilla install of Valheim Dedicated Server from Steam. No mods are used for this install
 
 ## Post Tasks
 
