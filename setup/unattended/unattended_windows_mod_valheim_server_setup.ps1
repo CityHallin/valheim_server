@@ -153,8 +153,12 @@ If ($valheimServerFolderCheck.Path -eq $valheimServerFolder) {
         Remove-Item "$valheimServerFolder\valheim_server-main" -Recurse -Force
 }
 
-#Start scheduled task
+#Start scheduled task and restarttask to to set DB
 Write-Host "`nStarting Valheim scheduled task"
+Start-sleep 30
+Start-ScheduledTask -TaskName $scheduledTaskName
+Start-sleep 30
+Stop-ScheduledTask -TaskName $scheduledTaskName
 Start-sleep 30
 Start-ScheduledTask -TaskName $scheduledTaskName
 

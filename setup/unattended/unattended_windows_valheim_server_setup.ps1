@@ -141,8 +141,12 @@ $scheduledTask = @"
 #Import Scheduled task
 Register-ScheduledTask -Xml $scheduledTask -TaskName $scheduledTaskName -Force
 
-#Start scheduled task
-Write-Host "`nStarting Valheim scheduled task"
+#Start scheduled task and restarttask to to set DB
+Write-Host "`nStarting Valheim scheduled task. Please wait a couple of minutes for the task to start a couple of times to set to Valheim database"
+Start-sleep 30
+Start-ScheduledTask -TaskName $scheduledTaskName
+Start-sleep 30
+Stop-ScheduledTask -TaskName $scheduledTaskName
 Start-sleep 30
 Start-ScheduledTask -TaskName $scheduledTaskName
 
