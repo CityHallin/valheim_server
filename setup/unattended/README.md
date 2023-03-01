@@ -22,6 +22,7 @@ These scripts will install Valheim dedicated server on a Windows 10 or Windows 2
     - [Valheim Plus](https://www.nexusmods.com/valheim/mods/4)
     - [Jotunn](https://www.nexusmods.com/valheim/mods/1138) (requirement for other mods)
     - [Valheim Raft](https://www.nexusmods.com/valheim/mods/1136)
+- Add Azure PowerShell modules
 
 ## Requirements
 

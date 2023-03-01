@@ -150,5 +150,11 @@ Stop-ScheduledTask -TaskName $scheduledTaskName
 Start-sleep 30
 Start-ScheduledTask -TaskName $scheduledTaskName
 
+#Add Azure modules
+Install-PackageProvider -Name NuGet -Force -Confirm:$false
+Install-Module Az.Accounts -Force -Confirm:$false
+Install-Module Az.Storage -Force -Confirm:$false
+Install-Module Az.Resources -Force -Confirm:$false
+
 #Stop log
 Stop-Transcript
